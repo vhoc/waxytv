@@ -15,8 +15,8 @@ class MediaController extends Controller
      */
     public function play( Request $request )
     {
-        //shell_exec( "vlc '" + $request->file + "'" );
-        return response()->json( $request );
+        shell_exec( "vlc '" + $request->file + "'" );
+        //return response()->json( $request );
         //shell_exec( "sudo reboot" );
     }
 
