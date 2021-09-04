@@ -19,4 +19,9 @@ class MediaController extends Controller
         return response->json( $request );
     }
 
+    public function test()
+    {
+        return "Test";
+    }
+
 }
