@@ -17,4 +17,4 @@ $router->get('/', function () use ($router) {
     return $router->app->version();
 });
 
-$router->put( '/play', 'MediaController@play' );
+$router->post( '/play', 'MediaController@play' );
