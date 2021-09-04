@@ -16,14 +16,3 @@
 $router->get('/', function () use ($router) {
     return $router->app->version();
 });
-
-/*
-$router->post( '/play', [
-    'as' => 'play',
-    'uses' => 'MediaController@play'
-] );
-*/
-
-$router->get('/play', function () use ($router) {
-    return $router->app->version();
-});
