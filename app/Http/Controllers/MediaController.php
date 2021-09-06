@@ -16,7 +16,9 @@ class MediaController extends Controller
     public function play( Request $request )
     {
         //shell_exec( "cvlc '". $request->file ."'" );
-        shell_exec( "wget --user= --password=waxytv http://localhost:8080/requests/status.xml?command=in_play&input=" . $request->file );
+        $command = "wget --user= --password=waxytv http://localhost:8080/requests/status.xml?command=in_play&input=" . $request->file;
+        return $command;
+        //shell_exec( "wget --user= --password=waxytv http://localhost:8080/requests/status.xml?command=in_play&input=" . $request->file );
     }
 
     public function playlistClear()
