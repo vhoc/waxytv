@@ -15,10 +15,14 @@ class MediaController extends Controller
      */
     public function play( Request $request )
     {
+        $logofile = "--logo-file=";
+        $logoX = "--logo-x=";
+        $logoY = "--logo-y=";
+
+        // {0 (Center), 1 (Left), 2 (Right), 4 (Top), 8 (Bottom), 5 (Top-Left), 6 (Top-Right), 9 (Bottom-Left), 10 (Bottom-Right)}
+        $logoPosition = "--logo-position={10}";
+
         exec( 'vlc -I http --fullscreen '.$request->loop.' '.$request->repeat.' "' . $request->path . '" > /dev/null &' );
-        //$command = "http://localhost:8080/requests/status.xml?command=in_play&input=" . urlencode( $request->file );
-        //return "wget --user= --password=waxytv " . $command;
-        //shell_exec( "wget --user= --password=waxytv http://localhost:8080/requests/status.xml?command=in_play&input=" . $request->file );
     }
 
     public function playlistClear()
