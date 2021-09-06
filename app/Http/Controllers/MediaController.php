@@ -18,9 +18,9 @@ class MediaController extends Controller
         shell_exec( "cvlc '". $request->file ."'" );
     }
 
-    public function test()
+    public function stop()
     {
-        return "Test";
+        shell_exec( "wget --user= --password=waxytv http://localhost:8080/requests/status.xml?command=pl_stop" );
     }
 
 }
