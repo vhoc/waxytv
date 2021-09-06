@@ -15,8 +15,8 @@ class MediaController extends Controller
      */
     public function play( Request $request )
     {
-        shell_exec( "sudo touch /home/pi/holamundo.txt" );
-        //shell_exec( "vlc '/home/pi/Videos/menu taco bravo.mp4'" );
+        //shell_exec( "sudo touch /home/pi/holamundo.txt" );
+        shell_exec( "cvlc '/home/pi/Videos/menu taco bravo.mp4'" );
     }
 
     public function test()
