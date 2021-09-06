@@ -16,6 +16,9 @@ class MediaController extends Controller
     public function play( Request $request )
     {
         shell_exec( "vlc -I http '". $request->file ."'" );
+        return response()->json( [
+            'message' => 'Playing file'
+        ] );
         //$command = "http://localhost:8080/requests/status.xml?command=in_play&input=" . urlencode( $request->file );
         //return "wget --user= --password=waxytv " . $command;
         //shell_exec( "wget --user= --password=waxytv http://localhost:8080/requests/status.xml?command=in_play&input=" . $request->file );
