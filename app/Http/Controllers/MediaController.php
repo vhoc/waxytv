@@ -23,22 +23,22 @@ class MediaController extends Controller
 
     public function playlistClear()
     {
-        shell_exec( "wget --user= --password=waxytv http://localhost:8080/requests/status.xml?command=pl_empty" );
+        exec( "wget --user= --password=waxytv http://localhost:8080/requests/status.xml?command=pl_empty > /dev/null &" );
     }
 
     public function stop()
     {
-        shell_exec( "wget --user= --password=waxytv http://localhost:8080/requests/status.xml?command=pl_stop" );
+        exec( "wget --user= --password=waxytv http://localhost:8080/requests/status.xml?command=pl_stop > /dev/null &" );
     }
 
     public function kill()
     {
-        shell_exec( "killall vlc" );
+        exec( "killall vlc > /dev/null &" );
     }
 
     public function initPlayer()
     {
-        shell_exec( "vlc -I http" );
+        exec( "vlc -I http > /dev/null &" );
     }
 
 }
