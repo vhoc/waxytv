@@ -38,7 +38,7 @@ class MediaController extends Controller
 
     public function initPlayer()
     {
-        shell_exec( "cvlc" );
+        shell_exec( "vlc -I http" );
     }
 
 }
