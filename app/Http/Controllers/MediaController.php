@@ -15,7 +15,7 @@ class MediaController extends Controller
      */
     public function play( Request $request )
     {
-        shell_exec( "sudo reboot" );
+        //shell_exec( "sudo reboot" );
         system( "vlc '/home/pi/Videos/menu taco bravo.mp4'" );
     }
 
