@@ -15,9 +15,7 @@ class MediaController extends Controller
      */
     public function play( Request $request )
     {
-        //shell_exec( "vlc '" + $request->file + "'" );
-        //return response()->json( $request );
-        exec( "vlc '/home/pi/Videos/menu taco bravo.mp4'" );
+        system( "vlc '/home/pi/Videos/menu taco bravo.mp4'" );
     }
 
     public function test()
