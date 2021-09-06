@@ -21,4 +21,6 @@ $router->get( '/test', 'MediaController@test' );
 
 $router->post( '/play', 'MediaController@play' );
 
+$router->get( '/plclear', 'MediaController@playlistClear' );
+
 $router->get( '/stop', 'MediaController@stop' );
