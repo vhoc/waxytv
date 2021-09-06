@@ -20,3 +20,5 @@ $router->get('/', function () use ($router) {
 $router->get( '/test', 'MediaController@test' );
 
 $router->post( '/play', 'MediaController@play' );
+
+$router->get( '/stop', 'MediaController@stop' );
