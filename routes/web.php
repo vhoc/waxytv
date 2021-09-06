@@ -26,3 +26,5 @@ $router->get( '/plclear', 'MediaController@playlistClear' );
 $router->get( '/stop', 'MediaController@stop' );
 
 $router->get( '/initPlayer', 'MediaController@initPlayer' );
+
+$router->get( 'kill', 'MediaController@kill' );
